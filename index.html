@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+      player('rock')
+    "
+      class="move-button"
+    >
+      <img src="./images/rock-emoji.png" alt="" class="move-icon" />
+    </button>
+    <button onclick="player('paper') " class="move-button">
+      <img src="./images/paper-emoji.png" alt="" class="move-icon" />
+    </button>
+    <button onclick="player('scissors')" class="move-button">
+      <img src="./images/scissors-emoji.png" alt="" class="move-icon" />
+    </button>
+
+    <p class="score"></p>
+    <p class="result"></p>
+    <p class="status"></p>
+
+    <p class="display display-none">
+      Are you sure want to reset
+      <button
+        onclick="
+        score.win=0
+      score.lose=0
+      score.tie=0
+
+      handleScore();
+      displayYesOff();
+        "
+      >
+        Yes
+      </button>
+      <button onclick="displayYesOff();">No</button>
+    </p>
+    <button
+      onclick="
+      displayOn()
+    "
+      class="reset-button"
+    >
+      Reset Score
+    </button>
+
+    <button class="autoplay-button play-button" onclick="autoPlay() ">
+      AutoPlay
+    </button>
+
+    <script src="App.js"></script>
+  </body>
+</html>
